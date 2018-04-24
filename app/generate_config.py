@@ -28,7 +28,7 @@ def main(argv):
         ## save original stdout
         orig_stdout = sys.stdout
 
-        f = open(dev.hostname+'.txt', 'w')
+        f = open(dev.hostname+'.txt', 'w') # In Windows Python Environment, must add the encoding='utf-8', otherwise error.
         sys.stdout = f
         print(dev)
         print(dev.show_config_all())
